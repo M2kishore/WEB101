@@ -1,0 +1,19 @@
+<h2>Programming Languages</h2>
+<ul id="languages-list"></ul>
+<script>
+    let languages = ["Kotlin", "Rust", "Typescript", "Python", "Javascript"];
+    // result to store the jsx strings
+    let result = [];
+    //function for creating list item jsx
+    let createList = (value) => {
+        let element = "<li>" + value + "</li>";
+        result.push(element);//appending all created list items
+    }
+    //applying function to array
+    languages.forEach(language => createList(language));
+    //compiling all the result as it is DOM manipulation takes a lot of computation
+    let html = result.join("\n");
+
+    //pushing the html into the following id
+    document.getElementById("languages-list").innerHTML = html;
+</script>
