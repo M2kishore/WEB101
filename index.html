@@ -1,19 +1,26 @@
-<h2>Programming Languages</h2>
-<ul id="languages-list"></ul>
-<script>
-    let languages = ["Kotlin", "Rust", "Typescript", "Python", "Javascript"];
-    // result to store the jsx strings
-    let result = [];
-    //function for creating list item jsx
-    let createList = (value) => {
-        let element = "<li>" + value + "</li>";
-        result.push(element);//appending all created list items
-    }
-    //applying function to array
-    languages.forEach(language => createList(language));
-    //compiling all the result as it is DOM manipulation takes a lot of computation
-    let html = result.join("\n");
+<h1>Multiplication Tables</h1>
+<div id="table" style="display: flex;"></div>
 
-    //pushing the html into the following id
-    document.getElementById("languages-list").innerHTML = html;
+<script>
+        //generate multiplication table for single number
+        let numbers = [1, 2, 3, 4, 5];
+        let multipliers = [1, 2, 3, 4, 5];
+        let htmlArr = [];
+        numbers.forEach((number) => {
+            let table = [];
+
+            let MultiplicationLine = (multiplier) => {
+                let product = number * multiplier;
+                let html = "<p>" + number + " x " + multiplier + " = " + product + "</p>"
+
+                table.push(html);
+            }
+
+        multipliers.forEach(MultiplicationLine);
+        console.table(table);
+        let html = '<div style="padding: 8px 16px;background-color: beige;margin-right: 16px">'
+            + table.join("\n") + "</div>";
+        htmlArr.push(html);
+    })
+            document.getElementById("table").innerHTML = htmlArr.join("<br>");
 </script>
