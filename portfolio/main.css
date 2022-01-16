@@ -1,0 +1,94 @@
+body {
+    color: aliceblue;
+    font-size: 28px;
+    background-image: url("assets/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  .navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.2);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgba(0,0,0,.5);
+  }
+  
+  .active {
+    background-color: crimson;
+  }
+
+  .spin{
+      width: fit-content;
+      height: fit-content;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes spin {
+      from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(360deg);
+      }
+  }
+  .center {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 30px;
+  }
+  .card_half {
+    margin-right: auto;
+    margin-left: 5%;
+    margin-top: 10px;
+    width: 40%;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.1);
+    height: 300px;
+    border-radius: 10px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    float: left;
+}
+.card_full {
+    margin-right: auto;
+    margin-left: 5%;
+    margin-top: 10px;
+    width: 90%;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.1);
+    height: 300px;
+    border-radius: 10px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    float: left;
+}
+.project_image:hover{
+    transform: scale(1.1);
+}
