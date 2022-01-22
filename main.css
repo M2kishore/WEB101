@@ -79,9 +79,8 @@ body {
     margin-right: auto;
     margin-left: 5%;
     margin-top: 10px;
-    width: 90%;
+    width: 80%;
     box-shadow: 0 15px 25px rgba(129, 124, 124, 0.1);
-    height: 300px;
     border-radius: 10px;
     backdrop-filter: blur(14px);
     background-color: rgba(0, 0, 0, 0.2);
@@ -91,4 +90,7 @@ body {
 }
 .project_image:hover{
     transform: scale(1.1);
+}
+.red{
+  color: red;
 }

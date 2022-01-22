@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function validate() {
+            var name = document.f1.name.value;
+            var passwordlength = document.f1.password.value.length;
+            var status = false;
+            if (name == "") {
+                document.getElementById("namelocation").innerHTML =
+                    "Please enter your name";
+                status = false;
+            } else {
+                status = true;
+            }
+
+            if (passwordlength < 6) {
+                document.getElementById("passwordlocation").innerHTML =
+                    "Password must be greater than 6";
+                status = false;
+            }
+            return status;
+        }  
+    </script>
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="interest.html">Interest</a></li>
+        <li><a class="active" href="company.html">Company</a></li>
+    </ul>
+    <img style="object-fit: cover;" width="100%" height="20%"
+        src="https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        alt="company picture">
+    <form class="center" id="form" name="f1" action="http://www.javatpoint.com/javascriptpages/valid.jsp"
+        onsubmit="return validate()">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" />
+                    <span id="namelocation" style="color:red"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" />
+                    <span id="passwordlocation" style="color:red"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type="radio" name="gender" id="gender1" value="Male"><label for="gender1">Male</label>
+                    <input type="radio" name="gender" id="gender2" value="Female" /><label for="gender2">Female</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Address:</td>
+                <td><textarea rows="7" cols="50" id="address" name="address" form="form"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Birthday:</td>
+                <td>
+                    <input type="date" id="birthday" name="birthday">
+                </td>
+            </tr>
+            <tr>
+                <td>Select Games:</td>
+                <td>
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1"> I have a bike</label>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2"> I have a car</label>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label for="vehicle3"> I have a boat</label><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Marital Status:</td>
+                <td><input type="radio" name="mstatus" id="mstatus1" value="Married"><label
+                        for="mstatus1">Married</label>
+                    <input type="radio" name="mstatus" id="mstatus2" value="Unmarried" /><label
+                        for="mstatus2">Unmarried</label>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><input type="radio" name="terms" id="terms" value="accept"><label for="terms">Accept terms and
+                        conditions</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="register" /> </td>
+            </tr>
+        </table>
+    </form>
+    <img style="object-fit: cover;" width="100%" height="20%"
+        src="https://images.unsplash.com/photo-1553013746-658f0e0ab4cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+        alt="company picture">
+</body>
+
+</html>
