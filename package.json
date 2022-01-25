@@ -1,0 +1,19 @@
+{
+  "name": "cloud_computing",
+  "version": "1.0.0",
+  "description": "Pupilfirst web development course as a part of GDC fellowship",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M2kishore/WEB101.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M2kishore/WEB101/issues"
+  },
+  "homepage": "https://github.com/M2kishore/WEB101#readme"
+}
